@@ -1,0 +1,68 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<div class="col-sm-10 text-center">
+    <h3 class="text-white  text-center" style="margin-top: 60px;" >Welcome to MyBlogs.com !</h3>
+    
+    <div class="card">
+        <div class="card-body">
+          <h5 class="card-title" style="color: antiquewhite;">REGISTER </h5>
+          <hr style="color: antiquewhite;">
+          <p class="card-text" style="color: antiquewhite;">At MyBlogs, we believe in the power of expression, creativity, and sharing ideas. Whether you're a seasoned writer, a budding poet, an amateur photographer, or someone with a passion to share stories, MyBlogs provides the perfect platform for you to unleash your creativity and connect with like-minded individuals from around the globe.</p>
+          <a href="{% url 'signup' %}" class="btn btn-primary">Signup</a>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title" style="color: antiquewhite;"> READ/WRITE BLOGS  </h5>
+          <hr style="color: antiquewhite;">
+          <p class="card-text" style="color: antiquewhite;">Explore a diverse range of topics, from lifestyle and travel to technology and philosophy. Dive into captivating narratives, insightful reflections, and thought-provoking discussions curated by our vibrant community of bloggers</p>
+          <a href="{% url 'login' %}" class="btn btn-primary">Login</a>
+        </div>
+      </div>
+    <!-- <div class="card text-center text-white">
+        <div class="card-header">
+          <h5 class="card-title font-weight-bold">
+          Blog Title
+          </h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <a href="#" class="btn btn-primary">LIKE</a>
+        </div>
+        <div class=" text-white card-footer text-body-secondary " >
+          2 days ago
+        </div>
+      </div> -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

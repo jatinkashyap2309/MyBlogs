@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBlogs</title>
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <style>
+        body{
+        background-color: black;
+        color: antiquewhite;
+    }
+    .card{
+        background-color: rgb(83, 81, 81);
+    }
+</style>
+<div class="container-fluid bg-dark">
+    {% include 'blog/navbar.html' %}
+</div>
+<div  class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            {% block msg %}
+            {% endblock msg %}
+        </div>
+    </div>
+    <div class="row">
+        {% block side %}
+        {% endblock side %}
+        
+        
+        {% block content %}
+        {% endblock content %}
+    </div>
+</div>
+<script src="{% static 'blog/js/jquery.js' %}" ></script>
+<script src="{% static 'blog/js/popper.js' %}" ></script>
+<script src="{% static 'blog/js/bootstrap.js' %}" ></script>
+</body>
+</html>

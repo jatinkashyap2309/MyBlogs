@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="col-sm-10">
+    <h3 class="text-white my-5" > Dashboard /Add Post</h3>
+    <form method="post" novalidate>
+        {% csrf_token %}
+        {% for fm in Form %}
+        <div class="row mb-3">
+            <label for="inputEmail3" class="col-sm-2 col-form-label">{{fm.label_tag}} </label>
+            <div class="col-sm-10">{{fm}} </div></div>
+                          <p style="color: red;" >  {{fm.errors | striptags}} </p> 
+        
+        {% endfor %}
+        <input type="submit" value="ADD POST" class="btn btn-dark form-control"/> 
+        <br>
+        <br>
+        <a href="{% url 'dashboard' %}" class="btn btn-dark form-control" > Cancel</a>
+    </form>
+</div>
+{% endblock content %}
